@@ -12,25 +12,25 @@ phases:
       - python -m venv venv
       - source venv/bin/activate
 
-      - pip install --upgrade pip setuptools wheel
+      # IMPORTANT
+      - pip install "setuptools<81"
+
+      - pip install --upgrade pip wheel
 
       - "pip install PyYAML==6.0 --only-binary=:all:"
 
       - pip install cfn-lint==0.87.10
 
-      # Install taskcat with all dependencies
       - "pip install taskcat[all]"
 
   pre_build:
     commands:
       - source venv/bin/activate
-      - echo "Running cfn-lint"
       - cfn-lint template/main.yaml
 
   build:
     commands:
       - source venv/bin/activate
-      - echo "Running taskcat"
       - taskcat test run
 
 artifacts:
