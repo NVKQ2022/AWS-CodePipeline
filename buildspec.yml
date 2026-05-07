@@ -29,10 +29,10 @@ phases:
       - cfn-lint template/main.yaml
 
   build:
-    commands:
-      - source venv/bin/activate
-      - taskcat test run
-
+  commands:
+    - source venv/bin/activate
+    - echo "Running taskcat"
+    - taskcat test run --no-delete
 artifacts:
   files:
     - '**/*'

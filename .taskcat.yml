@@ -14,5 +14,3 @@ tests:
     regions:
       - ap-southeast-2
 
-general:
-  cleanup: false
