@@ -12,10 +12,7 @@ phases:
       - echo "Upgrade pip tools"
       - pip install --upgrade pip setuptools wheel
 
-      # Install PyYAML FIRST
-      - pip install PyYAML==6.0 --only-binary=:all:
-
-      # Install compatible versions
+      - "pip install PyYAML==6.0 --only-binary=:all:"
       - pip install cfn-lint==0.87.10
       - pip install taskcat==0.9.52
 
