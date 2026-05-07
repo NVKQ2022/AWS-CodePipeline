@@ -9,7 +9,7 @@ tests:
   default-test:
     template: template/main.yaml
     parameters:
-      KeyName: my-key
+      KeyName: devops-homework-ec2-key
       MyIP: 0.0.0.0/0
     regions:
       - ap-southeast-2
