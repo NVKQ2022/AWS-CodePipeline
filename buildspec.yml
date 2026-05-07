@@ -12,7 +12,6 @@ phases:
       - python -m venv venv
       - source venv/bin/activate
 
-      # IMPORTANT
       - pip install "setuptools<81"
 
       - pip install --upgrade pip wheel
@@ -29,10 +28,11 @@ phases:
       - cfn-lint template/main.yaml
 
   build:
-  commands:
-    - source venv/bin/activate
-    - echo "Running taskcat"
-    - taskcat test run --no-delete
+    commands:
+      - source venv/bin/activate
+      - echo "Running taskcat"
+      - taskcat test run --no-delete
+
 artifacts:
   files:
     - '**/*'
