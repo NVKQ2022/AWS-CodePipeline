@@ -127,7 +127,7 @@ Resources:
   PublicEC2:
     Type: AWS::EC2::Instance
     Properties:
-      InstanceType: t2.micro
+      InstanceType: t3.micro
       SubnetId: !Ref PublicSubnet
       KeyName: !Ref KeyName
       SecurityGroupIds:
@@ -136,7 +136,7 @@ Resources:
   PrivateEC2:
     Type: AWS::EC2::Instance
     Properties:
-      InstanceType: t2.micro
+      InstanceType: t3.micro
       SubnetId: !Ref PrivateSubnet
       KeyName: !Ref KeyName
       SecurityGroupIds:
