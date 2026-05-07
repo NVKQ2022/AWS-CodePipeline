@@ -31,7 +31,7 @@ phases:
     commands:
       - source venv/bin/activate
       - echo "Running taskcat"
-      - taskcat test run --no-delete
+      - taskcat test run
 
 artifacts:
   files:
