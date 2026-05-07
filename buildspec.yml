@@ -9,12 +9,16 @@ phases:
       - echo "Python version"
       - python --version
 
-      - echo "Upgrade pip"
+      - echo "Upgrade pip tools"
       - pip install --upgrade pip setuptools wheel
 
       - "pip install PyYAML==6.0 --only-binary=:all:"
 
+      # Required dependencies
       - pip install requests
+      - pip install dulwich
+
+      # Main tools
       - pip install cfn-lint==0.87.10
       - pip install taskcat==0.9.52
 
