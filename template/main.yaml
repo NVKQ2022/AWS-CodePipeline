@@ -4,11 +4,12 @@ Description: VPC with Public/Private Subnets, NAT Gateway, EC2, Security Groups
 Parameters:
   KeyName:
     Type: AWS::EC2::KeyPair::KeyName
+    Default: devops-homework-ec2-key
     Description: SSH Key Pair
 
   MyIP:
     Type: String
-    Description: Your IP (e.g. x.x.x.x/32)
+    Default: 0.0.0.0/0
 
 Resources:
 
