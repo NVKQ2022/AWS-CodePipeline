@@ -1,0 +1,11 @@
+project:
+  name: devops-homework
+  regions:
+    - ap-southeast-2
+
+tests:
+  default-test:
+    template: template/main.yaml
+    parameters:
+      KeyName: my-key
+      MyIP: 0.0.0.0/0
